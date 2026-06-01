@@ -1,4 +1,4 @@
-```yaml id="wokfqp"
+```yaml
 name: Deploy React App to EC2
 
 on:

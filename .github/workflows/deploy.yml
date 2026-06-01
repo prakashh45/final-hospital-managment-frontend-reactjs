@@ -21,9 +21,12 @@ jobs:
       - name: Install dependencies
         run: npm install --include=dev
 
+      - name: Fix permissions
+        run: chmod +x node_modules/.bin/vite
+
       - name: Build React App
-        run: npx vite build
-        
+        run: ./node_modules/.bin/vite build
+
       - name: Deploy files to EC2
         uses: appleboy/scp-action@master
         with:

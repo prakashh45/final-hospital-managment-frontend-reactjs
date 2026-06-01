@@ -1,7 +1,6 @@
-```yaml
 name: Deploy React App to EC2
 
-"on":
+on:
   push:
     branches:
       - main
@@ -41,4 +40,3 @@ jobs:
           username: ec2-user
           key: ${{ secrets.EC2_SSH_KEY }}
           script: sudo systemctl restart nginx
-```
